@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Terminal Style Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Logo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="terminal">
+            <div class="command-line">
+                <span class="prompt">user@linux:~$</span>
+                <textarea id="command-input" placeholder="Type your command here..." autofocus></textarea>
+            </div>
+            <div class="output">
+                <!-- Output of commands will go here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>About me: I am a web developer with a passion for creating interactive web applications.</p>
+    </footer>
+
+    <script>
+        // Auto-resize the textarea
+        const textarea = document.getElementById('command-input');
+        
+        textarea.addEventListener('input', function () {
+            this.style.height = 'auto'; // Reset height
+            this.style.height = `${this.scrollHeight}px`; // Set height to scroll height
+        });
+    </script>
+</body>
+</html>

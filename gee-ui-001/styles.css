@@ -1,0 +1,86 @@
+/* General styles */
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Navbar styles */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff00; /* Change color on hover */
+}
+
+/* Terminal styles */
+.terminal {
+    padding: 20px;
+    height: calc(100vh - 100px); /* Adjust height considering header and footer */
+    overflow-y: auto; /* Enable scroll for terminal output */
+    border: 1px solid #444;
+}
+
+.command-line {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.prompt {
+    margin-right: 10px;
+    align-self: flex-start; /* Ensure prompt is aligned to the top */
+}
+
+/* Changed input to textarea for multiline support */
+#command-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    resize: none; /* Disable resizing */
+    min-height: 20px; /* Minimum height for the textarea */
+    overflow-y: auto;
+    max-height: 350px; /* Maximum height for the textarea */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
